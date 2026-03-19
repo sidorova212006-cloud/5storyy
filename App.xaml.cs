@@ -9,5 +9,5 @@ namespace plug;
 /// </summary>
 public partial class App : Application
 {
-}
+} 
 

@@ -7,7 +7,6 @@
     <Grid Margin="10">
         <TabControl Background="White" BorderBrush="#DADADA">
 
-            <!-- Вкладка 1: Линолеум / Плинтус -->
             <TabItem Header="Линолеум/Плинтус">
                 <StackPanel Margin="20">
                     <TextBlock Text="Расчет погонных метров" FontSize="18" FontWeight="Bold" Margin="0,0,0,15"/>
@@ -24,7 +23,6 @@
                 </StackPanel>
             </TabItem>
 
-            <!-- Вкладка 2: Плитка -->
             <TabItem Header="Плитка">
                 <StackPanel Margin="20">
                     <TextBlock Text="Расчет упаковок плитки (+10%)" FontSize="18" FontWeight="Bold" Margin="0,0,0,15"/>
@@ -40,7 +38,6 @@
                 </StackPanel>
             </TabItem>
 
-            <!-- Вкладка 3: Бетон -->
             <TabItem Header="Бетон">
                 <StackPanel Margin="20">
                     <TextBlock Text="Объем бетона для фундамента" FontSize="18" FontWeight="Bold" Margin="0,0,0,15"/>
@@ -59,7 +56,6 @@
                 </StackPanel>
             </TabItem>
 
-            <!-- Вкладка 4: Кровля -->
             <TabItem Header="Кровля">
                 <StackPanel Margin="20">
                     <TextBlock Text="Расчет длины стропил" FontSize="18" FontWeight="Bold" Margin="0,0,0,15"/>
@@ -78,5 +74,5 @@
             </TabItem>
 
         </TabControl>
-    </Grid>
+    </Grid> 
 </Window>
