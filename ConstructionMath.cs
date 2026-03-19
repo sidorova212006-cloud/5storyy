@@ -1,29 +1,28 @@
-using System;
+using System.ComponentModel;
+using System.Runtime.CompilerServices;
+namespace BuildCalc;
 
-public static class ConstructionMath
+public class ConstructionViewModel : INotifyPropertyChanged
 {
-    // 1. Квадратные метры в погонные (для линолеума)
-    public static double SqMetToLinear(double area, double width) => area / width;
+    private double _tileArea;
+    private double _m2InPackage = 1.5; 
 
-    // 2. Площадь стен (Периметр * Высота - Площадь проемов)
-    public static double WallArea(double length, double width, double height, double openingsArea) 
-        => (2 * (length + width) * height) - openingsArea;
-
-    // 3. Объем бетона (плита)
-    public static double ConcreteVolumeSlab(double length, double width, double depth) 
-        => length * width * depth;
-
-    // 4. Расчет плитки с запасом (10%) и округлением до упаковок
-    public static int TilePackages(double area, double m2InPackage)
-    {
-        double totalWithWaste = area * 1.10; // +10%
-        return (int)Math.Ceiling(totalWithWaste / m2InPackage);
+    public double TileArea 
+    { 
+        get => _tileArea; 
+        set { _tileArea = value; OnPropertyChanged(); OnPropertyChanged(nameof(TotalPackages)); } 
     }
 
-    // 5. Длина стропил через угол (Гипотенуза = Катет / cos(заданный угол))
-    public static double RafterLength(double horizontalProjection, double angleDegrees)
-    {
-        double angleRadians = angleDegrees * (Math.PI / 180);
-        return horizontalProjection / Math.Cos(angleRadians);
+    public double M2InPackage 
+    { 
+        get => _m2InPackage; 
+        set { _m2InPackage = value; OnPropertyChanged(); OnPropertyChanged(nameof(TotalPackages)); } 
     }
+
+    public int TotalPackages => ConstructionMath.TilePackages(_tileArea, _m2InPackage);
+
+
+    public event PropertyChangedEventHandler PropertyChanged;
+    protected void OnPropertyChanged([CallerMemberName] string name = null) 
+        => PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
 }
