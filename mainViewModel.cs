@@ -18,7 +18,7 @@ public class ConstructionViewModel : INotifyPropertyChanged
         set { _m2InPackage = value; OnPropertyChanged(); OnPropertyChanged(nameof(TotalPackages)); } 
     }
 
-    public int TotalPackages => ConstructionMath.TilePackages(_tileArea, _m2InPackage);g
+    public int TotalPackages => ConstructionMath.TilePackages(_tileArea, _m2InPackage);
 
     public event PropertyChangedEventHandler PropertyChanged;
     protected void OnPropertyChanged([CallerMemberName] string name = null) 
