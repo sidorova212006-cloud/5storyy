@@ -6,7 +6,6 @@ C:\Users\Lenovo\Desktop\plug\bin\Debug\net10.0-windows\plug.pdb
 C:\Users\Lenovo\Desktop\plug\obj\Debug\net10.0-windows\MainWindow.g.cs
 C:\Users\Lenovo\Desktop\plug\obj\Debug\net10.0-windows\App.g.cs
 C:\Users\Lenovo\Desktop\plug\obj\Debug\net10.0-windows\plug_MarkupCompile.cache
-C:\Users\Lenovo\Desktop\plug\obj\Debug\net10.0-windows\plug_MarkupCompile.lref
 C:\Users\Lenovo\Desktop\plug\obj\Debug\net10.0-windows\MainWindow.baml
 C:\Users\Lenovo\Desktop\plug\obj\Debug\net10.0-windows\plug.g.resources
 C:\Users\Lenovo\Desktop\plug\obj\Debug\net10.0-windows\plug.GeneratedMSBuildEditorConfig.editorconfig
@@ -38,3 +37,4 @@ C:\Users\Leshik\Desktop\plug\obj\Debug\net10.0-windows\refint\plug.dll
 C:\Users\Leshik\Desktop\plug\obj\Debug\net10.0-windows\plug.pdb
 C:\Users\Leshik\Desktop\plug\obj\Debug\net10.0-windows\plug.genruntimeconfig.cache
 C:\Users\Leshik\Desktop\plug\obj\Debug\net10.0-windows\ref\plug.dll
+C:\Users\Lenovo\Desktop\plug\obj\Debug\net10.0-windows\plug.sourcelink.json

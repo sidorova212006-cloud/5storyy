@@ -11,7 +11,6 @@ namespace BuildCalc
             InitializeComponent();
         }
 
-        // --- Вкладка 1: Линолеум / Плинтус ---
         private void CalculateLinoleum_Click(object sender, RoutedEventArgs e)
         {
             if (double.TryParse(txtArea.Text, out double area) &&
@@ -27,7 +26,6 @@ namespace BuildCalc
             }
         }
 
-        // --- Вкладка 2: Плитка (авторасчёт при вводе) ---
         private void CalculateTile_Changed(object sender, TextChangedEventArgs e)
         {
             if (txtTileArea == null || txtPackageSize == null || txtTotalPackages == null)
@@ -47,7 +45,6 @@ namespace BuildCalc
             }
         }
 
-        // --- Вкладка 3: Бетон ---
         private void CalculateConcrete_Click(object sender, RoutedEventArgs e)
         {
             if (double.TryParse(txtL.Text, out double l) &&
@@ -63,7 +60,6 @@ namespace BuildCalc
             }
         }
 
-        // --- Вкладка 4: Кровля ---
         private void CalculateRafters_Click(object sender, RoutedEventArgs e)
         {
             if (double.TryParse(txtProjection.Text, out double projection) &&

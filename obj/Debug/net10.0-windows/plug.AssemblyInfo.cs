@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("plug")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+505cf3820a743b100608cb1b4bb274b2f1fd2d91")]
 [assembly: System.Reflection.AssemblyProductAttribute("plug")]
 [assembly: System.Reflection.AssemblyTitleAttribute("plug")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

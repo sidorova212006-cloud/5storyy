@@ -1,28 +1,15 @@
-using System.ComponentModel;
-using System.Runtime.CompilerServices;
+using System;
+
 namespace BuildCalc;
 
-public class ConstructionViewModel : INotifyPropertyChanged
+public static class ConstructionMath
 {
-    private double _tileArea;
-    private double _m2InPackage = 1.5; 
-
-    public double TileArea 
-    { 
-        get => _tileArea; 
-        set { _tileArea = value; OnPropertyChanged(); OnPropertyChanged(nameof(TotalPackages)); } 
+    // Метод для расчета количества упаковок плитки
+    public static int TilePackages(double tileArea, double m2InPackage)
+    {
+        if (m2InPackage <= 0) return 0; // Защита от деления на ноль
+        
+        // Округляем количество упаковок в большую сторону (Math.Ceiling)
+        return (int)Math.Ceiling(tileArea / m2InPackage); 
     }
-
-    public double M2InPackage 
-    { 
-        get => _m2InPackage; 
-        set { _m2InPackage = value; OnPropertyChanged(); OnPropertyChanged(nameof(TotalPackages)); } 
-    }
-
-    public int TotalPackages => ConstructionMath.TilePackages(_tileArea, _m2InPackage);
-
-
-    public event PropertyChangedEventHandler PropertyChanged;
-    protected void OnPropertyChanged([CallerMemberName] string name = null) 
-        => PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
 }
