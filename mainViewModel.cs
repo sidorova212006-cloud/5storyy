@@ -1,7 +1,7 @@
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 
-namespace BuildCalc; // Добавили пространство имен, чтобы он видел ConstructionMath
+namespace BuildCalc;
 
 public class ConstructionViewModel : INotifyPropertyChanged
 {
@@ -32,10 +32,8 @@ public class ConstructionViewModel : INotifyPropertyChanged
 
     public int TotalPackages => ConstructionMath.TilePackages(_tileArea, _m2InPackage);
 
-    // ИСПРАВЛЕНИЕ: Добавлен '?' после PropertyChangedEventHandler
     public event PropertyChangedEventHandler? PropertyChanged;
     
-    // ИСПРАВЛЕНИЕ: Добавлен '?' после string
     protected void OnPropertyChanged([CallerMemberName] string? name = null) 
         => PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
 }
