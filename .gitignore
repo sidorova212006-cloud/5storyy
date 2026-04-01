@@ -1,3 +1,13 @@
-bin/
-.qwen/
-obj/
+# Игнорировать всё
+*
+
+# Разрешить папки Models и ViewModels
+!Models/
+!ViewModels/
+
+# Внутри папок разрешить только .cs файлы
+Models/*
+!Models/*.cs
+ViewModels/*
+!ViewModels/*.cs
+!5storyy.txt

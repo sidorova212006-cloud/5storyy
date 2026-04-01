@@ -10,18 +10,18 @@ namespace plug.ViewModels
 
         public double HorizontalProjection
         {
-            get => _model.HorizontalProjection;
-            set { _model.HorizontalProjection = value; OnPropertyChanged(); OnPropertyChanged(nameof(RafterLength)); }
+            get => _model.CalcHorizontalProjection;
+            set { _model.CalcHorizontalProjection = value; OnPropertyChanged(); OnPropertyChanged(nameof(RafterLength)); }
         }
 
         public double AngleDegrees
         {
-            get => _model.AngleDegrees;
-            set { _model.AngleDegrees = value; OnPropertyChanged(); OnPropertyChanged(nameof(RafterLength)); }
+            get => _model.CalcAngleDegrees;
+            set { _model.CalcAngleDegrees = value; OnPropertyChanged(); OnPropertyChanged(nameof(RafterLength)); }
         }
 
-        public string RafterLength => (_model.AngleDegrees > 0 && _model.AngleDegrees < 90)
-            ? $"{ConstructionMath.RafterLength(_model.HorizontalProjection, _model.AngleDegrees):F2} м"
+        public string RafterLength => (_model.CalcAngleDegrees > 0 && _model.CalcAngleDegrees < 90)
+            ? $"{ConstructionMath.RafterLength(_model.CalcHorizontalProjection, _model.CalcAngleDegrees):F2} м"
             : "—";
 
         public event PropertyChangedEventHandler? PropertyChanged;

@@ -10,24 +10,24 @@ namespace plug.ViewModels
 
         public double Length
         {
-            get => _model.Length;
-            set { _model.Length = value; OnPropertyChanged(); OnPropertyChanged(nameof(ConcreteVolume)); }
+            get => _model.CalcLength;
+            set { _model.CalcLength = value; OnPropertyChanged(); OnPropertyChanged(nameof(ConcreteVolume)); }
         }
 
         public double Width
         {
-            get => _model.Width;
-            set { _model.Width = value; OnPropertyChanged(); OnPropertyChanged(nameof(ConcreteVolume)); }
+            get => _model.CalcWidth;
+            set { _model.CalcWidth = value; OnPropertyChanged(); OnPropertyChanged(nameof(ConcreteVolume)); }
         }
 
         public double Depth
         {
-            get => _model.Depth;
-            set { _model.Depth = value; OnPropertyChanged(); OnPropertyChanged(nameof(ConcreteVolume)); }
+            get => _model.CalcDepth;
+            set { _model.CalcDepth = value; OnPropertyChanged(); OnPropertyChanged(nameof(ConcreteVolume)); }
         }
 
         public string ConcreteVolume =>
-            $"{ConstructionMath.ConcreteVolumeSlab(_model.Length, _model.Width, _model.Depth):F3} м³";
+            $"{ConstructionMath.ConcreteVolumeSlab(_model.CalcLength, _model.CalcWidth, _model.CalcDepth):F3} м³";
 
         public event PropertyChangedEventHandler? PropertyChanged;
         protected void OnPropertyChanged([CallerMemberName] string? name = null)

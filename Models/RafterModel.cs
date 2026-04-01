@@ -2,8 +2,8 @@ namespace plug.Models
 {
     public class RafterModel
     {
-        public double HorizontalProjection { get; set; }
-        public double AngleDegrees { get; set; }
+        public double CalcHorizontalProjection { get; set; }
+        public double CalcAngleDegrees { get; set; }
     }
 }
 

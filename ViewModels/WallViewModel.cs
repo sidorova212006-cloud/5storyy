@@ -10,30 +10,30 @@ namespace plug.ViewModels
 
         public double Length
         {
-            get => _model.Length;
-            set { _model.Length = value; OnPropertyChanged(); OnPropertyChanged(nameof(WallAreaResult)); }
+            get => _model.CalcLength;
+            set { _model.CalcLength = value; OnPropertyChanged(); OnPropertyChanged(nameof(WallAreaResult)); }
         }
 
         public double Width
         {
-            get => _model.Width;
-            set { _model.Width = value; OnPropertyChanged(); OnPropertyChanged(nameof(WallAreaResult)); }
+            get => _model.CalcWidth;
+            set { _model.CalcWidth = value; OnPropertyChanged(); OnPropertyChanged(nameof(WallAreaResult)); }
         }
 
         public double Height
         {
-            get => _model.Height;
-            set { _model.Height = value; OnPropertyChanged(); OnPropertyChanged(nameof(WallAreaResult)); }
+            get => _model.CalcHeight;
+            set { _model.CalcHeight = value; OnPropertyChanged(); OnPropertyChanged(nameof(WallAreaResult)); }
         }
 
         public double OpeningsArea
         {
-            get => _model.OpeningsArea;
-            set { _model.OpeningsArea = value; OnPropertyChanged(); OnPropertyChanged(nameof(WallAreaResult)); }
+            get => _model.CalcOpeningsArea;
+            set { _model.CalcOpeningsArea = value; OnPropertyChanged(); OnPropertyChanged(nameof(WallAreaResult)); }
         }
 
         public string WallAreaResult =>
-            $"{ConstructionMath.WallArea(_model.Length, _model.Width, _model.Height, _model.OpeningsArea):F2} м²";
+            $"{ConstructionMath.WallArea(_model.CalcLength, _model.CalcWidth, _model.CalcHeight, _model.CalcOpeningsArea):F2} м²";
 
         public event PropertyChangedEventHandler? PropertyChanged;
         protected void OnPropertyChanged([CallerMemberName] string? name = null)
