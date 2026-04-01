@@ -9,3 +9,5 @@ namespace plug.ViewModels
         public RafterViewModel Rafter { get; } = new RafterViewModel();
     }
 }
+
+

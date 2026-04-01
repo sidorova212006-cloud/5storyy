@@ -8,3 +8,5 @@ namespace plug.Models
         public double OpeningsArea { get; set; }
     }
 }
+
+

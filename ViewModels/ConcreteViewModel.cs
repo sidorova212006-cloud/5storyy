@@ -34,3 +34,5 @@ namespace plug.ViewModels
             => PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name!));
     }
 }
+
+

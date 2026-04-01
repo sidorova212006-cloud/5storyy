@@ -6,3 +6,5 @@ namespace plug.Models
         public double AngleDegrees { get; set; }
     }
 }
+
+
