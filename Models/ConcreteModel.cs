@@ -2,9 +2,9 @@ namespace plug.Models
 {
     public class ConcreteModel
     {
-        public double Length { get; set; }
-        public double Width { get; set; }
-        public double Depth { get; set; }
+        public double CalcLength { get; set; }
+        public double CalcWidth { get; set; }
+        public double CalcDepth { get; set; }
     }
 }
 

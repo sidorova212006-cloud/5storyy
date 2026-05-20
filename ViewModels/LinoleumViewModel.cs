@@ -6,22 +6,22 @@ namespace plug.ViewModels
 {
     public class LinoleumViewModel : INotifyPropertyChanged
     {
-        private readonly LinoleumModel _model = new LinoleumModel { Width = 1.5 };
+        private readonly LinoleumModel _model = new LinoleumModel { CalcWidth = 1.5 };
 
         public double Area
         {
-            get => _model.Area;
-            set { _model.Area = value; OnPropertyChanged(); OnPropertyChanged(nameof(LinearMeters)); }
+            get => _model.CalcArea;
+            set { _model.CalcArea = value; OnPropertyChanged(); OnPropertyChanged(nameof(LinearMeters)); }
         }
 
         public double Width
         {
-            get => _model.Width;
-            set { _model.Width = value; OnPropertyChanged(); OnPropertyChanged(nameof(LinearMeters)); }
+            get => _model.CalcWidth;
+            set { _model.CalcWidth = value; OnPropertyChanged(); OnPropertyChanged(nameof(LinearMeters)); }
         }
 
-        public string LinearMeters => _model.Width > 0
-            ? $"{ConstructionMath.SqMetToLinear(_model.Area, _model.Width):F2} пог. м"
+        public string LinearMeters => _model.CalcWidth > 0
+            ? $"{ConstructionMath.SqMetToLinear(_model.CalcArea, _model.CalcWidth):F2} пог. м"
             : "—";
 
         public event PropertyChangedEventHandler? PropertyChanged;
