@@ -48,10 +48,14 @@ namespace plug.Services
             _settings.PropertyChanged += OnSettingsChanged;
         }
 
-        private async void OnSettingsChanged(object? sender, PropertyChangedEventArgs e)
+        private void OnSettingsChanged(object? sender, PropertyChangedEventArgs e)
         {
             if (_isRestoring) return;
+            _ = HandleSettingsChangedAsync();
+        }
 
+        private async Task HandleSettingsChangedAsync()
+        {
             // Debounce: отменяем предыдущий отложенный вызов
             _debounceCts?.Cancel();
             _debounceCts = new CancellationTokenSource();
